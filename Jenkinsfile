@@ -20,8 +20,9 @@ pipeline {
             steps {
                 echo "Building.. because %NAME% %LASTNAME% said so.."
                 sh '''
-				mvn clean install -DskipTests
+                echo "placeholder"
                 '''
+// 				mvn clean install -DskipTests
             }
         }
         stage('Test') {
