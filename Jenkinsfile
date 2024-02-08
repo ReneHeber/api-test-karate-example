@@ -1,21 +1,32 @@
 pipeline {
-    agent any
-
+    agent {
+        node {
+            label 'docker-agent-alpine'
+            }
+      }
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                echo 'This is an output test. :)'
+                echo "Building.."
+                sh '''
+                echo "doing build stuff.."
+                '''
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo "Testing.."
+                sh '''
+                echo "doing test stuff..
+                '''
             }
         }
-        stage('Deploy') {
+        stage('Deliver') {
             steps {
-                echo 'Deploying....'
+                echo 'Deliver....'
+                sh '''
+                echo "doing delivery stuff.."
+                '''
             }
         }
     }
