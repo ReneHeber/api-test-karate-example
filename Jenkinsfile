@@ -19,7 +19,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building.. because %NAME% %LASTNAME% said so.."
-                bat 'echo "Building.. because %NAME% %LASTNAME% said so.."'
                 sh '''
                 echo "placeholder for %NAME%"
                 '''
